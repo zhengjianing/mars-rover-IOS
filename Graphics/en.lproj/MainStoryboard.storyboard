@@ -14,12 +14,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-8Y-URG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="Leb-Td-1CB"/>
+                                    <constraint firstAttribute="width" constant="61" id="rHQ-eS-wuI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="M">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,17 +28,22 @@
                                     <action selector="operationButtonPressed:" destination="2" eventType="touchUpInside" id="WgX-d0-Gly"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-rR-f5O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-rR-f5O">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="4GP-1Z-Hzr"/>
+                                    <constraint firstAttribute="height" constant="43" id="iTf-KK-KAp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="L">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.051586442509999997" green="0.10255601039999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleShadowColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.094883771460000002" green="0.52156865600000002" blue="0.26081747900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.1204480988" blue="0.12592829920000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="operationButtonPressed:" destination="2" eventType="touchUpInside" id="bTL-JS-N5U"/>
@@ -48,10 +53,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="T7N-6t-4kF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="R">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,23 +65,90 @@
                                     <action selector="operationButtonPressed:" destination="2" eventType="touchUpInside" id="pIt-29-HS9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zl-kp-zj7" customClass="RoverView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-TD-Icj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="wkS-vb-AVK"/>
+                                    <constraint firstAttribute="height" constant="27" id="ype-LO-irM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="speedButtonPressed:" destination="2" eventType="touchUpInside" id="MXZ-Pw-bqK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-W3-HjZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="S6d-PE-a66"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="speedButtonPressed:" destination="2" eventType="touchUpInside" id="qVu-4S-Lmw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="CxW-8Y-URG" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="J6A-85-rNb"/>
-                            <constraint firstItem="aZC-rR-f5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="OL6-2u-xII"/>
-                            <constraint firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="QrJ-Zb-Nlw"/>
-                            <constraint firstAttribute="bottom" secondItem="FmF-m3-ZWK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bUa-ae-aSg"/>
-                            <constraint firstAttribute="trailing" secondItem="FmF-m3-ZWK" secondAttribute="trailing" constant="26" id="o6V-bg-8FU"/>
-                            <constraint firstItem="CxW-8Y-URG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="124" id="qce-5L-7Js"/>
+                            <constraint firstAttribute="trailing" secondItem="1Zl-kp-zj7" secondAttribute="trailing" constant="268" id="7ve-YJ-oiI"/>
+                            <constraint firstItem="CxW-8Y-URG" firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" type="default" id="B39-d7-8vw"/>
+                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="leading" type="default" id="Grq-Ee-ohw"/>
+                            <constraint firstAttribute="trailing" secondItem="iHI-W3-HjZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HXg-ry-Gbf"/>
+                            <constraint firstItem="FmF-m3-ZWK" firstAttribute="bottom" secondItem="CxW-8Y-URG" secondAttribute="bottom" type="default" id="ISo-Ih-JgF"/>
+                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="top" secondItem="vTU-TD-Icj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K0I-m0-aea"/>
+                            <constraint firstAttribute="bottom" secondItem="1Zl-kp-zj7" secondAttribute="bottom" constant="490" id="KVd-vI-mKa"/>
+                            <constraint firstItem="1Zl-kp-zj7" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="OpO-ky-7uI"/>
+                            <constraint firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" constant="12" id="QkX-xa-S2r"/>
+                            <constraint firstItem="CxW-8Y-URG" firstAttribute="top" secondItem="aZC-rR-f5O" secondAttribute="top" type="default" id="Uq2-vp-V8E"/>
+                            <constraint firstItem="FmF-m3-ZWK" firstAttribute="top" secondItem="CxW-8Y-URG" secondAttribute="top" type="default" id="W1l-Qv-mul"/>
+                            <constraint firstAttribute="bottom" secondItem="iHI-W3-HjZ" secondAttribute="bottom" constant="5" id="ewZ-TR-JOH"/>
+                            <constraint firstAttribute="trailing" secondItem="FmF-m3-ZWK" secondAttribute="trailing" constant="82" id="fiN-9v-LTL"/>
+                            <constraint firstItem="1Zl-kp-zj7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h6N-tC-mhr"/>
+                            <constraint firstItem="CxW-8Y-URG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="99" id="sQ1-Zb-gub"/>
+                            <constraint firstAttribute="trailing" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vYK-Pa-axQ"/>
+                            <constraint firstItem="aZC-rR-f5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yZF-F9-nFA"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-352" y="7"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="GraphicsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphicsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="operationButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="speedButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="graphicsViewControllerView" candidateClass="GraphicsViewControllerView"/>
+                <relationship kind="outlet" name="roverView" candidateClass="RoverView"/>
+            </relationships>
+        </class>
+        <class className="GraphicsViewControllerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphicsViewControllerView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RoverView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RoverView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

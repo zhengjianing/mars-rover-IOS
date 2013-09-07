@@ -13,23 +13,18 @@
 
 @implementation GraphicsViewControllerView
 
-- (id)initWithImage:(UIImage *)image atPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation
+- (id)initWithImage:(UIImage *)backgroundImage
 {
     self = [super init];
     if (self) {
-        self.roverImage = image;
-        self.positionX = positionX;
-        self.positionY = positionY;
-        self.facing = orientation;
+        self.backgroundImage = backgroundImage;
     }
     return self;
 }
 
-
 - (void)drawRect:(CGRect)rect
 {
-    [self.roverImage drawAtPoint:CGPointMake(self.positionX, self.positionY)];
+    [self.backgroundImage drawAtPoint:CGPointMake(0.0f, 0.0f)];
 }
-
 
 @end

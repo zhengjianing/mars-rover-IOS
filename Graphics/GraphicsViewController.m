@@ -8,12 +8,15 @@
 
 #import "GraphicsViewController.h"
 #import "GraphicsViewControllerView.h"
+#import "RoverView.h"
 
 @interface GraphicsViewController ()
 @property (nonatomic) IBOutlet GraphicsViewControllerView *graphicsViewControllerView;
+@property (nonatomic) IBOutlet  RoverView *roverView;
 @end
 
 CGFloat degree = 0.0f;
+CGFloat speed = 0.5f;
 
 @implementation GraphicsViewController
 
@@ -21,13 +24,18 @@ CGFloat degree = 0.0f;
 {
     [super viewDidLoad];
 	
-    UIImage *roverImage = [UIImage imageNamed:@"roverNorth.jpg"];
-    self.graphicsViewControllerView = [[GraphicsViewControllerView alloc] initWithImage:roverImage atPositionX:0.0f atPositionY:0.0f facing:@"N"];
-
-    CGSize myImageSize = self.graphicsViewControllerView.roverImage.size;
-    [self.graphicsViewControllerView setFrame:CGRectMake(self.graphicsViewControllerView.positionX, self.graphicsViewControllerView.positionY, myImageSize.width, myImageSize.height)];
+    UIImage *backgroundImage = [UIImage imageNamed:@"sky3.jpg"];
+    self.graphicsViewControllerView = [[GraphicsViewControllerView alloc] initWithImage:backgroundImage];
+    [self.graphicsViewControllerView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 390.0f)];
+    
+    UIImage *roverImage = [UIImage imageNamed:@"rovergreen222.png"];
+    self.roverView = [[RoverView alloc] initWithImage:roverImage atPositionX:0.0f atPositionY:0.0f facing:@"N"];
+    
+    CGSize myImageSize = self.roverView.roverImage.size;
+    [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, myImageSize.width, myImageSize.height)];
  
     [self.view addSubview:self.graphicsViewControllerView];
+    [self.view addSubview:self.roverView];
 }
 
 - (IBAction)operationButtonPressed:(UIButton *)sender {
@@ -36,65 +44,76 @@ CGFloat degree = 0.0f;
     if ([operation isEqualToString:@"M"]) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         [UIView beginAnimations:@"rover animation" context:context];
-        [UIView setAnimationDuration:1.0f];
+        [UIView setAnimationDuration:speed];
         [UIView setAnimationDelegate:self];
 
-        if ([self.graphicsViewControllerView.facing isEqualToString:@"N"] && self.graphicsViewControllerView.positionY > 0) {
-            self.graphicsViewControllerView.positionY = self.graphicsViewControllerView.positionY - 30.0f;
+        if ([self.roverView.facing isEqualToString:@"N"] && self.roverView.positionY > 0) {
+            self.roverView.positionY = self.roverView.positionY - 50.0f;
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"S"] && self.graphicsViewControllerView.positionY < 331) {
-            self.graphicsViewControllerView.positionY = self.graphicsViewControllerView.positionY + 30.0f;
+        else if ([self.roverView.facing isEqualToString:@"S"] && self.roverView.positionY < 331) {
+            self.roverView.positionY = self.roverView.positionY + 50.0f;
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"W"] && self.graphicsViewControllerView.positionX > 0) {
-            self.graphicsViewControllerView.positionX = self.graphicsViewControllerView.positionX - 30.0f;
+        else if ([self.roverView.facing isEqualToString:@"W"] && self.roverView.positionX > 0) {
+            self.roverView.positionX = self.roverView.positionX - 50.0f;
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"E"] && self.graphicsViewControllerView.positionX < 271) {
-            if (self.graphicsViewControllerView.positionX == 240) {
-                self.graphicsViewControllerView.positionX = self.graphicsViewControllerView.positionX + 20.0f;
+        else if ([self.roverView.facing isEqualToString:@"E"] && self.roverView.positionX < 271) {
+            if (self.roverView.positionX == 250) {
+                self.roverView.positionX = self.roverView.positionX + 30.0f;
             } else {
-            self.graphicsViewControllerView.positionX = self.graphicsViewControllerView.positionX + 30.0f;
+            self.roverView.positionX = self.roverView.positionX + 50.0f;
             }
         }
         
-        CGSize myImageSize = self.graphicsViewControllerView.roverImage.size;
-        [self.graphicsViewControllerView setFrame:CGRectMake(self.graphicsViewControllerView.positionX, self.graphicsViewControllerView.positionY, myImageSize.width, myImageSize.height)];
+        CGSize myImageSize = self.roverView.roverImage.size;
+        [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, myImageSize.width, myImageSize.height)];
         [UIView commitAnimations];
     }
    
     else if ([operation isEqualToString:@"R"]) {
         degree = degree + 90.0f;
-        self.graphicsViewControllerView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
+        self.roverView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
         
-        if ([self.graphicsViewControllerView.facing isEqualToString:@"N"]) {
-            self.graphicsViewControllerView.facing = @"E";
+        if ([self.roverView.facing isEqualToString:@"N"]) {
+            self.roverView.facing = @"E";
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"E"]) {
-            self.graphicsViewControllerView.facing = @"S";
+        else if ([self.roverView.facing isEqualToString:@"E"]) {
+            self.roverView.facing = @"S";
         } 
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"S"]) {
-            self.graphicsViewControllerView.facing = @"W";
+        else if ([self.roverView.facing isEqualToString:@"S"]) {
+            self.roverView.facing = @"W";
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"W"]) {
-            self.graphicsViewControllerView.facing = @"N";
+        else if ([self.roverView.facing isEqualToString:@"W"]) {
+            self.roverView.facing = @"N";
         }
     }
         
     else if ([operation isEqualToString:@"L"]) {
         degree = degree - 90.0f;
-        self.graphicsViewControllerView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
+        self.roverView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
         
-        if ([self.graphicsViewControllerView.facing isEqualToString:@"N"]) {
-            self.graphicsViewControllerView.facing = @"W";
+        if ([self.roverView.facing isEqualToString:@"N"]) {
+            self.roverView.facing = @"W";
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"W"]) {
-            self.graphicsViewControllerView.facing = @"S";
+        else if ([self.roverView.facing isEqualToString:@"W"]) {
+            self.roverView.facing = @"S";
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"S"]) {
-            self.graphicsViewControllerView.facing = @"E";
+        else if ([self.roverView.facing isEqualToString:@"S"]) {
+            self.roverView.facing = @"E";
         }
-        else if ([self.graphicsViewControllerView.facing isEqualToString:@"E"]) {
-            self.graphicsViewControllerView.facing = @"N";
+        else if ([self.roverView.facing isEqualToString:@"E"]) {
+            self.roverView.facing = @"N";
         }
     }
 }
+
+- (IBAction)speedButtonPressed:(UIButton *)sender {
+    NSString *op = sender.currentTitle;
+    if ([op isEqualToString:@"+"]) {
+        speed = speed - 0.1f;
+    } else {
+        speed = speed + 0.1f;
+    }
+}
+
+
 @end

@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GraphicsViewControllerView : UIView
-@property (nonatomic, strong) UIImage *roverImage;
-@property (nonatomic) NSInteger positionX;
-@property (nonatomic) NSInteger positionY;
-@property (nonatomic, strong) NSString *facing;
+@property (nonatomic, strong) UIImage *backgroundImage;
 
-- (id)initWithImage:(UIImage *)image atPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation;
+- (id)initWithImage:(UIImage *)backgroundImage;
 @end
