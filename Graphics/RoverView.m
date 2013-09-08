@@ -10,13 +10,10 @@
 
 @implementation RoverView
 
-- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation
-{
+- (id)initWithRover:(RoverModel *)rover;{
     self = [super init];
     if (self) {
-        self.positionX = positionX;
-        self.positionY = positionY;
-        self.facing = orientation;
+        self.rover = rover;
     }
     return self;
 }

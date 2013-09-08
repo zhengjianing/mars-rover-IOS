@@ -9,6 +9,7 @@
 #import "GraphicsViewController.h"
 #import "GraphicsViewControllerView.h"
 #import "RoverView.h"
+#import "RoverModel.h"
 
 @interface GraphicsViewController ()
 @property (nonatomic) IBOutlet GraphicsViewControllerView *graphicsViewControllerView;
@@ -33,11 +34,14 @@ UIImage *roverImage;
     [self.view addSubview:self.graphicsViewControllerView];
     
     
+    RoverModel *roverModel = [[RoverModel alloc] initAtPositionX:0.0f atPositionY:0.0f facing:@"N"];
+    self.roverView = [[RoverView alloc] initWithRover:roverModel];
+    
     roverImage = [UIImage imageNamed:@"rovergreen222.png"];
     UIColor *roverBackground = [[UIColor alloc] initWithPatternImage:roverImage];
-    self.roverView = [[RoverView alloc] initAtPositionX:0.0f atPositionY:0.0f facing:@"N"];
     self.roverView.backgroundColor = roverBackground;
-    [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, roverImage.size.width, roverImage.size.height)];
+    
+    [self.roverView setFrame:CGRectMake(self.roverView.rover.positionX, self.roverView.rover.positionY, roverImage.size.width, roverImage.size.height)];
     [self.view addSubview:self.roverView];
 }
 
@@ -50,28 +54,28 @@ UIImage *roverImage;
         [UIView setAnimationDuration:speed];
         [UIView setAnimationDelegate:self];
 
-        if ([self.roverView.facing isEqualToString:@"N"] && self.roverView.positionY > 0) {
-            self.roverView.positionY = self.roverView.positionY - 50.0f;
+        if ([self.roverView.rover.facing isEqualToString:@"N"] && self.roverView.rover.positionY > 0) {
+            self.roverView.rover.positionY = self.roverView.rover.positionY - 50.0f;
         }
-        else if ([self.roverView.facing isEqualToString:@"S"] && self.roverView.positionY < 331) {
-            self.roverView.positionY = self.roverView.positionY + 50.0f;
+        else if ([self.roverView.rover.facing isEqualToString:@"S"] && self.roverView.rover.positionY < 331) {
+            self.roverView.rover.positionY = self.roverView.rover.positionY + 50.0f;
         }
-        else if ([self.roverView.facing isEqualToString:@"W"] && self.roverView.positionX > 0) {
-            if (self.roverView.positionX < 50) {
-                self.roverView.positionX = self.roverView.positionX - 30.0f;
+        else if ([self.roverView.rover.facing isEqualToString:@"W"] && self.roverView.rover.positionX > 0) {
+            if (self.roverView.rover.positionX < 50) {
+                self.roverView.rover.positionX = self.roverView.rover.positionX - 30.0f;
             } else {
-                self.roverView.positionX = self.roverView.positionX - 50.0f;
+                self.roverView.rover.positionX = self.roverView.rover.positionX - 50.0f;
             }
         }
-        else if ([self.roverView.facing isEqualToString:@"E"] && self.roverView.positionX < 271) {
-            if (self.roverView.positionX == 250) {
-                self.roverView.positionX = self.roverView.positionX + 30.0f;
+        else if ([self.roverView.rover.facing isEqualToString:@"E"] && self.roverView.rover.positionX < 271) {
+            if (self.roverView.rover.positionX == 250) {
+                self.roverView.rover.positionX = self.roverView.rover.positionX + 30.0f;
             } else {
-            self.roverView.positionX = self.roverView.positionX + 50.0f;
+            self.roverView.rover.positionX = self.roverView.rover.positionX + 50.0f;
             }
         }
         
-        [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, roverImage.size.width, roverImage.size.height)];
+        [self.roverView setFrame:CGRectMake(self.roverView.rover.positionX, self.roverView.rover.positionY, roverImage.size.width, roverImage.size.height)];
         [UIView commitAnimations];
     }
    
@@ -79,17 +83,17 @@ UIImage *roverImage;
         degree = degree + 90.0f;
         self.roverView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
         
-        if ([self.roverView.facing isEqualToString:@"N"]) {
-            self.roverView.facing = @"E";
+        if ([self.roverView.rover.facing isEqualToString:@"N"]) {
+            self.roverView.rover.facing = @"E";
         }
-        else if ([self.roverView.facing isEqualToString:@"E"]) {
-            self.roverView.facing = @"S";
+        else if ([self.roverView.rover.facing isEqualToString:@"E"]) {
+            self.roverView.rover.facing = @"S";
         } 
-        else if ([self.roverView.facing isEqualToString:@"S"]) {
-            self.roverView.facing = @"W";
+        else if ([self.roverView.rover.facing isEqualToString:@"S"]) {
+            self.roverView.rover.facing = @"W";
         }
-        else if ([self.roverView.facing isEqualToString:@"W"]) {
-            self.roverView.facing = @"N";
+        else if ([self.roverView.rover.facing isEqualToString:@"W"]) {
+            self.roverView.rover.facing = @"N";
         }
     }
         
@@ -97,17 +101,17 @@ UIImage *roverImage;
         degree = degree - 90.0f;
         self.roverView.transform = CGAffineTransformMakeRotation((degree * M_PI)/180.0f);
         
-        if ([self.roverView.facing isEqualToString:@"N"]) {
-            self.roverView.facing = @"W";
+        if ([self.roverView.rover.facing isEqualToString:@"N"]) {
+            self.roverView.rover.facing = @"W";
         }
-        else if ([self.roverView.facing isEqualToString:@"W"]) {
-            self.roverView.facing = @"S";
+        else if ([self.roverView.rover.facing isEqualToString:@"W"]) {
+            self.roverView.rover.facing = @"S";
         }
-        else if ([self.roverView.facing isEqualToString:@"S"]) {
-            self.roverView.facing = @"E";
+        else if ([self.roverView.rover.facing isEqualToString:@"S"]) {
+            self.roverView.rover.facing = @"E";
         }
-        else if ([self.roverView.facing isEqualToString:@"E"]) {
-            self.roverView.facing = @"N";
+        else if ([self.roverView.rover.facing isEqualToString:@"E"]) {
+            self.roverView.rover.facing = @"N";
         }
     }
 }
