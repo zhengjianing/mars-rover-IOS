@@ -17,6 +17,7 @@
 
 CGFloat degree = 0.0f;
 CGFloat speed = 0.5f;
+UIImage *roverImage;
 
 @implementation GraphicsViewController
 
@@ -25,16 +26,18 @@ CGFloat speed = 0.5f;
     [super viewDidLoad];
 	
     UIImage *backgroundImage = [UIImage imageNamed:@"sky3.jpg"];
-    self.graphicsViewControllerView = [[GraphicsViewControllerView alloc] initWithImage:backgroundImage];
+    UIColor *skyBackground = [[UIColor alloc] initWithPatternImage:backgroundImage];
+    self.graphicsViewControllerView = [[GraphicsViewControllerView alloc] init];
+    self.graphicsViewControllerView.backgroundColor = skyBackground;
     [self.graphicsViewControllerView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 390.0f)];
-    
-    UIImage *roverImage = [UIImage imageNamed:@"rovergreen222.png"];
-    self.roverView = [[RoverView alloc] initWithImage:roverImage atPositionX:0.0f atPositionY:0.0f facing:@"N"];
-    
-    CGSize myImageSize = self.roverView.roverImage.size;
-    [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, myImageSize.width, myImageSize.height)];
- 
     [self.view addSubview:self.graphicsViewControllerView];
+    
+    
+    roverImage = [UIImage imageNamed:@"rovergreen222.png"];
+    UIColor *roverBackground = [[UIColor alloc] initWithPatternImage:roverImage];
+    self.roverView = [[RoverView alloc] initAtPositionX:0.0f atPositionY:0.0f facing:@"N"];
+    self.roverView.backgroundColor = roverBackground;
+    [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, roverImage.size.width, roverImage.size.height)];
     [self.view addSubview:self.roverView];
 }
 
@@ -54,7 +57,11 @@ CGFloat speed = 0.5f;
             self.roverView.positionY = self.roverView.positionY + 50.0f;
         }
         else if ([self.roverView.facing isEqualToString:@"W"] && self.roverView.positionX > 0) {
-            self.roverView.positionX = self.roverView.positionX - 50.0f;
+            if (self.roverView.positionX < 50) {
+                self.roverView.positionX = self.roverView.positionX - 30.0f;
+            } else {
+                self.roverView.positionX = self.roverView.positionX - 50.0f;
+            }
         }
         else if ([self.roverView.facing isEqualToString:@"E"] && self.roverView.positionX < 271) {
             if (self.roverView.positionX == 250) {
@@ -64,8 +71,7 @@ CGFloat speed = 0.5f;
             }
         }
         
-        CGSize myImageSize = self.roverView.roverImage.size;
-        [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, myImageSize.width, myImageSize.height)];
+        [self.roverView setFrame:CGRectMake(self.roverView.positionX, self.roverView.positionY, roverImage.size.width, roverImage.size.height)];
         [UIView commitAnimations];
     }
    

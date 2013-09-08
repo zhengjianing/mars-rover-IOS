@@ -13,18 +13,8 @@
 
 @implementation GraphicsViewControllerView
 
-- (id)initWithImage:(UIImage *)backgroundImage
-{
-    self = [super init];
-    if (self) {
-        self.backgroundImage = backgroundImage;
-    }
-    return self;
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    [self.backgroundImage drawAtPoint:CGPointMake(0.0f, 0.0f)];
-}
+//- (void)drawRect:(CGRect)rect
+//{
+//}
 
 @end

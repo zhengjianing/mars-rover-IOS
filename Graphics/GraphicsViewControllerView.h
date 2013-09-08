@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GraphicsViewControllerView : UIView
-@property (nonatomic, strong) UIImage *backgroundImage;
 
-- (id)initWithImage:(UIImage *)backgroundImage;
 @end

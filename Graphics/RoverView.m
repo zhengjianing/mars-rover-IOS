@@ -10,11 +10,10 @@
 
 @implementation RoverView
 
-- (id)initWithImage:(UIImage *)image atPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation
+- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation
 {
     self = [super init];
     if (self) {
-        self.roverImage = image;
         self.positionX = positionX;
         self.positionY = positionY;
         self.facing = orientation;
@@ -22,9 +21,8 @@
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
-    [self.roverImage drawAtPoint:CGPointMake(self.positionX, self.positionY)];
-}
+//- (void)drawRect:(CGRect)rect
+//{
+//}
 
 @end
