@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RoverModel.h"
 
-@interface RoverView : UIView
+@interface RoverView : UIImageView
 
 @property (nonatomic) RoverModel *rover;
-
-- (id)initWithRover:(RoverModel *)rover;
 @end

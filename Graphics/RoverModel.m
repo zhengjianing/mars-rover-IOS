@@ -10,13 +10,15 @@
 
 @implementation RoverModel
 
-- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation
+- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation withSpeed:(CGFloat)speed andRotateDegree:(CGFloat)rotateDegree
 {
     self = [super init];
     if (self) {
         self.positionX = positionX;
         self.positionY = positionY;
         self.facing = orientation;
+        self.speed = speed;
+        self.rotateDegree = rotateDegree;
     }
     return self;
 }
