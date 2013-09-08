@@ -7,8 +7,8 @@
         <!--Graphics View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="GraphicsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="top" id="3" customClass="GraphicsViewControllerView">
+                <viewController id="2" customClass="MarsRoverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="top" id="3" customClass="SkyView">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>

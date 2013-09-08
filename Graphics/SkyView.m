@@ -1,17 +1,17 @@
 //
-//  GraphicsViewControllerView.m
+//  SkyView.m
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
 //  Copyright (c) 2013 jianing. All rights reserved.
 //
 
-#import "GraphicsViewControllerView.h"
+#import "SkyView.h"
 
-@interface GraphicsViewControllerView ()
+@interface SkyView ()
 @end
 
-@implementation GraphicsViewControllerView
+@implementation SkyView
 
 //- (void)drawRect:(CGRect)rect
 //{

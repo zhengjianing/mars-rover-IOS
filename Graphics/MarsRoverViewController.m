@@ -1,32 +1,32 @@
 //
-//  GraphicsViewController.m
+//  MarsRoverViewController.m
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
 //  Copyright (c) 2013 jianing. All rights reserved.
 //
 
-#import "GraphicsViewController.h"
-#import "GraphicsViewControllerView.h"
+#import "MarsRoverViewController.h"
+#import "SkyView.h"
 #import "RoverView.h"
-#import "ProcessorModel.h"
+#import "Processor.h"
 
-@interface GraphicsViewController ()
-@property (nonatomic) IBOutlet GraphicsViewControllerView *graphicsViewControllerView;
+@interface MarsRoverViewController ()
+@property (nonatomic) IBOutlet SkyView *graphicsViewControllerView;
 @property (nonatomic) RoverView *roverView;
-@property (nonatomic) ProcessorModel *processor;
+@property (nonatomic) Processor *processor;
 @end
 
 CGFloat imageWidth;
 CGFloat imageHight;
 
-@implementation GraphicsViewController
+@implementation MarsRoverViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.graphicsViewControllerView = [[GraphicsViewControllerView alloc] init];
+    self.graphicsViewControllerView = [[SkyView alloc] init];
     UIImage *backgroundImage = [UIImage imageNamed:@"sky.jpg"];
     UIColor *skyBackground = [[UIColor alloc] initWithPatternImage:backgroundImage];
     self.graphicsViewControllerView.backgroundColor = skyBackground;
@@ -35,16 +35,17 @@ CGFloat imageHight;
     UIImage *roverImage = [UIImage imageNamed:@"rover.png"];
     imageWidth = roverImage.size.width;
     imageHight = roverImage.size.height;
-
-    self.roverView = [[RoverView alloc] init];
     UIColor *roverBackground = [[UIColor alloc] initWithPatternImage:roverImage];
+
+    Rover *rover = [[Rover alloc] initAtPositionX:100.0f atPositionY:150.0f facing:@"N" withSpeed:1.0f andRotateDegree:0.0f];
+    self.roverView = [[RoverView alloc] initWithRover:rover];
     self.roverView.backgroundColor = roverBackground;
     [self.roverView setFrame:CGRectMake(self.roverView.rover.positionX, self.roverView.rover.positionY, imageWidth, imageHight)];
     
     [self.view addSubview:self.graphicsViewControllerView];
     [self.view addSubview:self.roverView];
 
-    self.processor = [[ProcessorModel alloc] init];
+    self.processor = [[Processor alloc] init];
 }
 
 - (IBAction)operationButtonPressed:(UIButton *)sender {

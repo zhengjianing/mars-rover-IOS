@@ -1,5 +1,5 @@
 //
-//  GraphicsViewControllerView.h
+//  MarsRoverViewController.h
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraphicsViewControllerView : UIView
+@interface MarsRoverViewController : UIViewController
 
 @end

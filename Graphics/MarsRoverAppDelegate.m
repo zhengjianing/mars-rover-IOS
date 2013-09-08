@@ -1,14 +1,14 @@
 //
-//  GraphicsAppDelegate.m
+//  MarsRoverAppDelegate.m
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
 //  Copyright (c) 2013 jianing. All rights reserved.
 //
 
-#import "GraphicsAppDelegate.h"
+#import "MarsRoverAppDelegate.h"
 
-@implementation GraphicsAppDelegate
+@implementation MarsRoverAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

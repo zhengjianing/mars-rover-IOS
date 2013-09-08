@@ -10,10 +10,10 @@
 
 @implementation RoverView
 
-- (id)init {
+- (id)initWithRover:rover {
     self = [super init];
     if (self) {
-        self.rover = [[RoverModel alloc] initAtPositionX:100.0f atPositionY:150.0f facing:@"N" withSpeed:1.0f andRotateDegree:0.0f];
+        self.rover = rover;
     }
     return self;
 }

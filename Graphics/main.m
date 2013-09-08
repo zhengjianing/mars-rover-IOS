@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GraphicsAppDelegate.h"
+#import "MarsRoverAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([GraphicsAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MarsRoverAppDelegate class]));
     }
 }

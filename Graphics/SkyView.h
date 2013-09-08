@@ -1,5 +1,5 @@
 //
-//  GraphicsViewController.h
+//  SkyView.h
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraphicsViewController : UIViewController
+@interface SkyView : UIView
 
 @end

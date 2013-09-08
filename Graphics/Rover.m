@@ -1,14 +1,14 @@
 //
-//  RoverModel.m
+//  Rover.m
 //  Graphics
 //
 //  Created by jianing on 9/8/13.
 //  Copyright (c) 2013 jianing. All rights reserved.
 //
 
-#import "RoverModel.h"
+#import "Rover.h"
 
-@implementation RoverModel
+@implementation Rover
 
 - (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation withSpeed:(CGFloat)speed andRotateDegree:(CGFloat)rotateDegree
 {

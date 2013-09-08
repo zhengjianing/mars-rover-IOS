@@ -1,5 +1,5 @@
 //
-//  GraphicsAppDelegate.h
+//  MarsRoverAppDelegate.h
 //  Graphics
 //
 //  Created by jianing on 9/7/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraphicsAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MarsRoverAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

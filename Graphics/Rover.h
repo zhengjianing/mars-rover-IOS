@@ -1,5 +1,5 @@
 //
-//  RoverModel.h
+//  Rover.h
 //  Graphics
 //
 //  Created by jianing on 9/8/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RoverModel : NSObject
+@interface Rover : NSObject
 
 @property (nonatomic) NSInteger positionX;
 @property (nonatomic) NSInteger positionY;
@@ -16,6 +16,6 @@
 @property (nonatomic) CGFloat speed;
 @property (nonatomic) CGFloat rotateDegree;
 
-- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation withSpeed:(CGFloat)speed andRotateDegree:rotateDegree;
+- (id)initAtPositionX:(CGFloat)positionX atPositionY:(CGFloat)positionY facing:(NSString *)orientation withSpeed:(CGFloat)speed andRotateDegree:(CGFloat)rotateDegree;
 
 @end
