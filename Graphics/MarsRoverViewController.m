@@ -81,13 +81,24 @@ CGFloat imageHight;
 - (void)turnLeftByRotateImage
 {
     [self.processor turnRight:self.roverView.rover];
+   
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [UIImageView beginAnimations:@"rover animation" context:context];
+    [UIImageView setAnimationDuration:0.5f];
+    [UIImageView setAnimationDelegate:self];
     self.roverView.transform = CGAffineTransformMakeRotation((self.roverView.rover.rotateDegree * M_PI)/180.0f);
+    [UIImageView commitAnimations];
 }
 
 - (void)turnRightByRotateImage
 {
     [self.processor turnLeft:self.roverView.rover];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [UIImageView beginAnimations:@"rover animation" context:context];
+    [UIImageView setAnimationDuration:0.5f];
+    [UIImageView setAnimationDelegate:self];
     self.roverView.transform = CGAffineTransformMakeRotation((self.roverView.rover.rotateDegree * M_PI)/180.0f);
+    [UIImageView commitAnimations];
 }
 
 @end
