@@ -10,11 +10,13 @@
 #import "SkyView.h"
 #import "RoverView.h"
 #import "Processor.h"
+#import "DetailViewController.h"
 
 @interface MarsRoverViewController ()
 @property (nonatomic) IBOutlet SkyView *graphicsViewControllerView;
 @property (nonatomic) RoverView *roverView;
 @property (nonatomic) Processor *processor;
+@property (nonatomic) NSInteger score;
 @end
 
 CGFloat imageWidth;
@@ -30,7 +32,7 @@ CGFloat imageHight;
     UIImage *backgroundImage = [UIImage imageNamed:@"sky.jpg"];
     UIColor *skyBackground = [[UIColor alloc] initWithPatternImage:backgroundImage];
     self.graphicsViewControllerView.backgroundColor = skyBackground;
-    [self.graphicsViewControllerView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 390.0f)];
+    [self.graphicsViewControllerView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 340.0f)];
     
     UIImage *roverImage = [UIImage imageNamed:@"rover.png"];
     imageWidth = roverImage.size.width;
@@ -47,6 +49,16 @@ CGFloat imageHight;
 
     self.processor = [[Processor alloc] init];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+    if([segue.identifier isEqualToString:@"showDetail"]) {
+            NSLog(@"-------- score %d", self.score);
+        [segue.destinationViewController setScore:self.score];
+    }
+}
+
 
 - (IBAction)operationButtonPressed:(UIButton *)sender {
     NSString *operation = sender.currentTitle;
@@ -69,6 +81,7 @@ CGFloat imageHight;
 - (void)moveRoverWithAnimation
 {
     [self.processor moveForward:self.roverView.rover];
+    self.score++;
     
     [UIView animateWithDuration:self.roverView.rover.speed
                           delay:0

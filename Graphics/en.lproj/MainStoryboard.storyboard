@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KO4-tx-djf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Graphics View Controller-->
+        <!--Mars Rover View Controller - game-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MarsRoverViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="top" id="3" customClass="SkyView">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-8Y-URG">
@@ -101,52 +101,135 @@
                                     <action selector="speedButtonPressed:" destination="2" eventType="touchUpInside" id="qVu-4S-Lmw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-Ic-qEF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MGi-wu-X8r" kind="push" identifier="showDetail" id="xAd-1z-eC3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iHI-W3-HjZ" secondAttribute="bottom" constant="7" id="1X1-8h-Mpf"/>
                             <constraint firstAttribute="trailing" secondItem="1Zl-kp-zj7" secondAttribute="trailing" constant="268" id="7ve-YJ-oiI"/>
                             <constraint firstItem="CxW-8Y-URG" firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" type="default" id="B39-d7-8vw"/>
-                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="leading" type="default" id="Grq-Ee-ohw"/>
-                            <constraint firstAttribute="trailing" secondItem="iHI-W3-HjZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HXg-ry-Gbf"/>
+                            <constraint firstItem="CxW-8Y-URG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="62" id="DIe-Ut-atk"/>
+                            <constraint firstItem="aZC-rR-f5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="FLh-pE-zGv"/>
                             <constraint firstItem="FmF-m3-ZWK" firstAttribute="bottom" secondItem="CxW-8Y-URG" secondAttribute="bottom" type="default" id="ISo-Ih-JgF"/>
-                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="top" secondItem="vTU-TD-Icj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K0I-m0-aea"/>
-                            <constraint firstAttribute="bottom" secondItem="1Zl-kp-zj7" secondAttribute="bottom" constant="490" id="KVd-vI-mKa"/>
+                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="leading" secondItem="FmF-m3-ZWK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="L90-gA-P2m"/>
+                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="top" secondItem="FmF-m3-ZWK" secondAttribute="top" type="default" id="Nbo-Hi-wuj"/>
                             <constraint firstItem="1Zl-kp-zj7" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="OpO-ky-7uI"/>
                             <constraint firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" constant="12" id="QkX-xa-S2r"/>
                             <constraint firstItem="CxW-8Y-URG" firstAttribute="top" secondItem="aZC-rR-f5O" secondAttribute="top" type="default" id="Uq2-vp-V8E"/>
                             <constraint firstItem="FmF-m3-ZWK" firstAttribute="top" secondItem="CxW-8Y-URG" secondAttribute="top" type="default" id="W1l-Qv-mul"/>
-                            <constraint firstAttribute="bottom" secondItem="iHI-W3-HjZ" secondAttribute="bottom" constant="5" id="ewZ-TR-JOH"/>
-                            <constraint firstAttribute="trailing" secondItem="FmF-m3-ZWK" secondAttribute="trailing" constant="82" id="fiN-9v-LTL"/>
                             <constraint firstItem="1Zl-kp-zj7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h6N-tC-mhr"/>
-                            <constraint firstItem="CxW-8Y-URG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="99" id="sQ1-Zb-gub"/>
-                            <constraint firstAttribute="trailing" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vYK-Pa-axQ"/>
-                            <constraint firstItem="aZC-rR-f5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yZF-F9-nFA"/>
+                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="leading" secondItem="iHI-W3-HjZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="mM4-za-Usm"/>
+                            <constraint firstItem="vTU-TD-Icj" firstAttribute="leading" secondItem="FmF-m3-ZWK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oD0-LK-aqs"/>
+                            <constraint firstAttribute="bottom" secondItem="1Zl-kp-zj7" secondAttribute="bottom" constant="484" id="qZ2-ow-E6c"/>
+                            <constraint firstAttribute="trailing" secondItem="GdW-Ic-qEF" secondAttribute="trailing" constant="5" id="rZK-ES-3Ww"/>
+                            <constraint firstItem="iHI-W3-HjZ" firstAttribute="top" secondItem="vTU-TD-Icj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yvV-p7-61E"/>
+                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zIo-Tl-9PI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="game" id="H5Z-WP-Sd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="7"/>
+            <point key="canvasLocation" x="-73" y="0.0"/>
+        </scene>
+        <!--Detail View Controller - detail-->
+        <scene sceneID="6mP-x2-mqe">
+            <objects>
+                <viewController id="MGi-wu-X8r" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uy-8n-kL8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sg-Nl-e1r">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7eB-nj-tpN"/>
+                                    <constraint firstAttribute="width" constant="64" id="o8k-s8-DD4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g8-1i-0NQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="G8g-2i-A9j"/>
+                                    <constraint firstAttribute="height" constant="21" id="Wtx-ul-sVX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1sg-Nl-e1r" firstAttribute="top" secondItem="6uy-8n-kL8" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BqR-9L-viq"/>
+                            <constraint firstAttribute="trailing" secondItem="6g8-1i-0NQ" secondAttribute="trailing" constant="96" id="GTQ-pi-PSi"/>
+                            <constraint firstItem="1sg-Nl-e1r" firstAttribute="leading" secondItem="6uy-8n-kL8" secondAttribute="leading" constant="41" id="dYf-wp-UDb"/>
+                            <constraint firstItem="6g8-1i-0NQ" firstAttribute="centerY" secondItem="1sg-Nl-e1r" secondAttribute="centerY" type="default" id="tk3-iq-acm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="detail" id="T46-gV-IAE"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="6g8-1i-0NQ" id="cMR-yr-nJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxT-fb-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="6"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="im0-4F-q3M">
+            <objects>
+                <navigationController id="KO4-tx-djf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LVP-Z8-ADN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="6s3-6u-TJi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-gg-elB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="0.0"/>
         </scene>
     </scenes>
     <classes>
-        <class className="GraphicsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphicsViewController.h"/>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MarsRoverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MarsRoverViewController.h"/>
             <relationships>
                 <relationship kind="action" name="operationButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="speedButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="graphicsViewControllerView" candidateClass="GraphicsViewControllerView"/>
-                <relationship kind="outlet" name="roverView" candidateClass="RoverView"/>
+                <relationship kind="outlet" name="graphicsViewControllerView" candidateClass="SkyView"/>
             </relationships>
-        </class>
-        <class className="GraphicsViewControllerView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphicsViewControllerView.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="RoverView" superclassName="UIView">
+        <class className="RoverView" superclassName="UIImageView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RoverView.h"/>
+        </class>
+        <class className="SkyView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkyView.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
