@@ -11,6 +11,6 @@
 @interface DetailViewController : UIViewController
 
 @property (nonatomic) NSInteger score;
-- (void)setScore:(NSInteger)score;
+@property (nonatomic) NSString *name;
 
 @end

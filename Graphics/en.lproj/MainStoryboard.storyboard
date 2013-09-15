@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="0.0"/>
+            <point key="canvasLocation" x="-326" y="-32"/>
         </scene>
         <!--Detail View Controller - detail-->
         <scene sceneID="6mP-x2-mqe">
@@ -170,13 +170,59 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAh-VC-7Dr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-nq-RkC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="yVg-QW-ClQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTN-5n-SON">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameInputed:" destination="MGi-wu-X8r" eventType="editingDidEnd" id="oqU-ZH-0mD"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-an-nYI">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="Lid-aU-W2N"/>
+                                    <constraint firstAttribute="height" constant="62" id="T9v-NG-3pn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Go to scoreboard">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iPv-Ey-87T" kind="push" id="uv3-yA-ch1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6g8-1i-0NQ" secondAttribute="trailing" constant="96" id="AAQ-UA-Rvy"/>
                             <constraint firstItem="1sg-Nl-e1r" firstAttribute="top" secondItem="6uy-8n-kL8" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BqR-9L-viq"/>
-                            <constraint firstAttribute="trailing" secondItem="6g8-1i-0NQ" secondAttribute="trailing" constant="96" id="GTQ-pi-PSi"/>
+                            <constraint firstItem="e4G-nq-RkC" firstAttribute="leading" secondItem="6uy-8n-kL8" secondAttribute="leading" constant="131" id="Gh3-4U-q8b"/>
+                            <constraint firstItem="qs3-an-nYI" firstAttribute="centerX" secondItem="6uy-8n-kL8" secondAttribute="centerX" type="default" id="HOz-ZU-XZf"/>
+                            <constraint firstItem="e4G-nq-RkC" firstAttribute="top" secondItem="6uy-8n-kL8" secondAttribute="top" constant="87" id="N6j-L9-cuy"/>
+                            <constraint firstAttribute="bottom" secondItem="qs3-an-nYI" secondAttribute="bottom" constant="81" id="NEp-yN-OvN"/>
                             <constraint firstItem="1sg-Nl-e1r" firstAttribute="leading" secondItem="6uy-8n-kL8" secondAttribute="leading" constant="41" id="dYf-wp-UDb"/>
+                            <constraint firstItem="1sg-Nl-e1r" firstAttribute="trailing" secondItem="PAh-VC-7Dr" secondAttribute="trailing" type="default" id="gZg-7B-thf"/>
+                            <constraint firstItem="GTN-5n-SON" firstAttribute="leading" secondItem="e4G-nq-RkC" secondAttribute="leading" type="default" id="jIf-P7-DZF"/>
+                            <constraint firstItem="PAh-VC-7Dr" firstAttribute="leading" secondItem="1sg-Nl-e1r" secondAttribute="leading" type="default" id="oTo-gS-e87"/>
+                            <constraint firstItem="PAh-VC-7Dr" firstAttribute="top" secondItem="6uy-8n-kL8" secondAttribute="top" constant="91" id="ryb-wX-Ozg"/>
+                            <constraint firstItem="GTN-5n-SON" firstAttribute="baseline" secondItem="e4G-nq-RkC" secondAttribute="baseline" type="default" id="tB9-7Q-bk6"/>
                             <constraint firstItem="6g8-1i-0NQ" firstAttribute="centerY" secondItem="1sg-Nl-e1r" secondAttribute="centerY" type="default" id="tk3-iq-acm"/>
+                            <constraint firstItem="GTN-5n-SON" firstAttribute="trailing" secondItem="e4G-nq-RkC" secondAttribute="trailing" type="default" id="upJ-id-Ki3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="detail" id="T46-gV-IAE"/>
@@ -186,7 +232,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxT-fb-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="6"/>
+            <point key="canvasLocation" x="137" y="-22"/>
+        </scene>
+        <!--View Controller - scoreboard-->
+        <scene sceneID="bMW-Pv-iOg">
+            <objects>
+                <viewController id="iPv-Ey-87T" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XFr-se-TLz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="scoreboard" id="aJP-1W-WP5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVu-1n-XAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="-14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="im0-4F-q3M">
@@ -204,13 +265,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-gg-elB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-599" y="0.0"/>
+            <point key="canvasLocation" x="-817" y="-32"/>
         </scene>
     </scenes>
     <classes>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="nameInputed:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
