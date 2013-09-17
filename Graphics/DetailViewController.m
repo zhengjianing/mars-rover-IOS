@@ -30,9 +30,13 @@
     [self.scoreLabel setText:[NSString stringWithFormat:@"%d", self.score]];
 }
 
+- (IBAction)detailViewTouchDown:(id)sender
+{
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
+
 - (IBAction)nameInputed:(UITextField *)sender {
     self.name = sender.text;
 }
-
 
 @end

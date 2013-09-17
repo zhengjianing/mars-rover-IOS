@@ -118,4 +118,8 @@ CGFloat imageHight;
                      completion:nil];
 }
 
+- (IBAction)restartButtonClicked:(id)sender {
+    self.score = 0;
+}
+
 @end

@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSString *name;
+- (IBAction)detailViewTouchDown:(id)sender;
 
 @end
