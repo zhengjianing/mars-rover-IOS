@@ -14,6 +14,10 @@
 
 @implementation MyTableViewController
 
+{
+    NSArray *sortedPlayers;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -22,7 +26,13 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    
+    sortedPlayers = [self.players sortedArrayUsingComparator:^(id obj1, id obj2){
+        NSNumber *score1 = [obj1 objectForKey:@"score"];
+        NSNumber *score2 = [obj2 objectForKey:@"score"];
+        return [score2 compare:score1];
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -46,7 +56,7 @@
     }
     
     NSUInteger row = [indexPath row];
-    NSMutableArray *player = [self.players objectAtIndex:row];
+    NSMutableArray *player = [sortedPlayers objectAtIndex:row];
     cell.textLabel.text = [player valueForKey:@"name"];
     
     NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];

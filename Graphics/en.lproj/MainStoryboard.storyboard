@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="-326" y="-32"/>
         </scene>
-        <!--Detail View Controller - detail-->
+        <!--Detail View Controller - results-->
         <scene sceneID="6mP-x2-mqe">
             <objects>
                 <viewController id="MGi-wu-X8r" customClass="DetailViewController" sceneMemberID="viewController">
@@ -227,14 +227,14 @@
                             <action selector="detailViewTouchDown:" destination="MGi-wu-X8r" eventType="touchDown" id="d9D-WM-xk6"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="detail" id="T46-gV-IAE"/>
+                    <navigationItem key="navigationItem" title="results" id="T46-gV-IAE"/>
                     <connections>
                         <outlet property="scoreLabel" destination="6g8-1i-0NQ" id="cMR-yr-nJp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxT-fb-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="630"/>
+            <point key="canvasLocation" x="191" y="-32"/>
         </scene>
         <!--Score Board View Controller - scoreboard-->
         <scene sceneID="bMW-Pv-iOg">
@@ -358,7 +358,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tr-tK-nXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="-32"/>
+            <point key="canvasLocation" x="670" y="-32"/>
         </scene>
         <!--View Controller - scoreboard-->
         <scene sceneID="blt-bw-V9V">
@@ -408,6 +408,9 @@
         <class className="MarsRoverViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MarsRoverViewController.h"/>
             <relationships>
+                <relationship kind="action" name="operationButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="restartButtonClicked:"/>
+                <relationship kind="action" name="speedButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="graphicsViewControllerView" candidateClass="SkyView"/>
             </relationships>
         </class>
