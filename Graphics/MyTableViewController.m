@@ -22,9 +22,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    self.scores = [NSArray arrayWithObjects:@"jianing", @"zheng", nil];
+    [super viewDidLoad];    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -34,7 +32,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.scores count];
+    return [self.players count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -48,7 +46,7 @@
     }
     
     NSUInteger row = [indexPath row];
-    cell.textLabel.text = [self.scores objectAtIndex:row];
+    cell.textLabel.text = [self.players objectAtIndex:row];
     cell.detailTextLabel.text = @"30";
     return cell;
 }

@@ -103,10 +103,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-Ic-qEF">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="5Nd-5x-3vC"/>
+                                    <constraint firstAttribute="height" constant="60" id="7Yd-5a-73A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Score">
+                                <state key="normal" title="Finish">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -117,48 +117,29 @@
                                     <segue destination="MGi-wu-X8r" kind="push" identifier="showDetail" id="xAd-1z-eC3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxZ-Dz-jLH">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="Mx8-4k-Hxb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="restart">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="restartButtonClicked:" destination="2" eventType="touchUpInside" id="ECy-6z-mXa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="GdW-Ic-qEF" secondAttribute="bottom" constant="7" id="0B4-ES-dpA"/>
-                            <constraint firstItem="vxZ-Dz-jLH" firstAttribute="baseline" secondItem="vTU-TD-Icj" secondAttribute="baseline" type="default" id="3av-fb-dXd"/>
                             <constraint firstItem="iHI-W3-HjZ" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="leading" type="default" id="42O-wp-gsD"/>
                             <constraint firstItem="GdW-Ic-qEF" firstAttribute="leading" secondItem="iHI-W3-HjZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4RZ-Ae-Kba"/>
                             <constraint firstAttribute="bottom" secondItem="aZC-rR-f5O" secondAttribute="bottom" constant="12" id="8Vd-5h-8de"/>
                             <constraint firstItem="FmF-m3-ZWK" firstAttribute="bottom" secondItem="CxW-8Y-URG" secondAttribute="bottom" type="default" id="ISo-Ih-JgF"/>
                             <constraint firstItem="aZC-rR-f5O" firstAttribute="centerX" secondItem="1Zl-kp-zj7" secondAttribute="centerX" type="default" id="LTY-8V-r0a"/>
-                            <constraint firstAttribute="trailing" secondItem="vxZ-Dz-jLH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ML7-nh-wkx"/>
+                            <constraint firstAttribute="bottom" secondItem="iHI-W3-HjZ" secondAttribute="bottom" constant="8" id="Nuk-69-eHI"/>
                             <constraint firstItem="1Zl-kp-zj7" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="OpO-ky-7uI"/>
                             <constraint firstItem="aZC-rR-f5O" firstAttribute="bottom" secondItem="CxW-8Y-URG" secondAttribute="bottom" type="default" id="PkI-Mc-Szp"/>
+                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="top" secondItem="vTU-TD-Icj" secondAttribute="top" type="default" id="Vs4-6b-oNJ"/>
                             <constraint firstItem="FmF-m3-ZWK" firstAttribute="top" secondItem="CxW-8Y-URG" secondAttribute="top" type="default" id="W1l-Qv-mul"/>
                             <constraint firstItem="aZC-rR-f5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="11" id="fMg-3o-SeI"/>
-                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="leading" secondItem="vxZ-Dz-jLH" secondAttribute="leading" type="default" id="gKi-QK-Fpu"/>
-                            <constraint firstAttribute="trailing" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="96" id="gf3-GY-KJY"/>
                             <constraint firstItem="1Zl-kp-zj7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h6N-tC-mhr"/>
                             <constraint firstItem="aZC-rR-f5O" firstAttribute="top" secondItem="CxW-8Y-URG" secondAttribute="top" type="default" id="iDl-Ph-4hx"/>
-                            <constraint firstItem="vxZ-Dz-jLH" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="mXj-VL-eKS"/>
                             <constraint firstAttribute="trailing" secondItem="GdW-Ic-qEF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oaF-VO-wJA"/>
                             <constraint firstItem="FmF-m3-ZWK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="108" id="qV0-qC-7aT"/>
                             <constraint firstAttribute="bottom" secondItem="1Zl-kp-zj7" secondAttribute="bottom" constant="484" id="qZ2-ow-E6c"/>
                             <constraint firstItem="CxW-8Y-URG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="58" id="tCD-45-o90"/>
                             <constraint firstItem="GdW-Ic-qEF" firstAttribute="baseline" secondItem="iHI-W3-HjZ" secondAttribute="baseline" type="default" id="tCW-l6-D2Q"/>
-                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="top" secondItem="vTU-TD-Icj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vQW-SP-vqc"/>
+                            <constraint firstItem="GdW-Ic-qEF" firstAttribute="leading" secondItem="vTU-TD-Icj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zB1-Ie-Pb5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="game" id="H5Z-WP-Sd0"/>
@@ -205,7 +186,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="nameInputed:" destination="MGi-wu-X8r" eventType="editingDidEnd" id="oqU-ZH-0mD"/>
+                                    <action selector="inputName:" destination="MGi-wu-X8r" eventType="editingDidEnd" id="Cks-Rm-fLw"/>
+                                    <action selector="nameInputed:" destination="MGi-wu-X8r" eventType="editingDidEnd" id="OrI-gH-WY5"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-an-nYI">
@@ -222,7 +204,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iuU-HI-OTh" kind="push" id="Ri7-aa-zch"/>
+                                    <action selector="goToScoreboardPressed:" destination="MGi-wu-X8r" eventType="touchUpInside" id="I0I-hV-BQL"/>
+                                    <segue destination="iuU-HI-OTh" kind="push" identifier="goToScoreboard" id="Ri7-aa-zch"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -416,6 +399,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
                 <relationship kind="action" name="detailViewTouchDown:"/>
+                <relationship kind="action" name="goToScoreboardPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="inputName:" candidateClass="UITextField"/>
                 <relationship kind="action" name="nameInputed:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
             </relationships>

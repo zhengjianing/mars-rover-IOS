@@ -24,6 +24,10 @@ CGFloat imageHight;
 
 @implementation MarsRoverViewController
 
+{
+    Players *players;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,14 +52,18 @@ CGFloat imageHight;
     [self.view addSubview:self.roverView];
 
     self.processor = [[Processor alloc] init];
+    
+    players = [[Players alloc] init];
+    players.allPlayers = [[NSMutableArray alloc] init];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 
     if([segue.identifier isEqualToString:@"showDetail"]) {
-            NSLog(@"-------- score %d", self.score);
-        [segue.destinationViewController setScore:self.score];
+        [segue.destinationViewController setScore:self.score];        
+        [segue.destinationViewController setPlayers:players.allPlayers];
+        self.score = 0;
     }
 }
 

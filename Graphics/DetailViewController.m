@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     [self.scoreLabel setText:[NSString stringWithFormat:@"%d", self.score]];
 }
 
@@ -35,8 +34,27 @@
     [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
 }
 
-- (IBAction)nameInputed:(UITextField *)sender {
+- (IBAction)inputName:(UITextField *)sender {
     self.name = sender.text;
+    
+    [self.players addObject:self.name];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"goToScoreboard"]) {
+        [segue.destinationViewController setPlayers:self.players];
+    }
+}
+
+
+
+// remove
+- (IBAction)nameInputed:(UITextField *)sender {
+}
+
+// remove
+- (IBAction)goToScoreboardPressed:(UIButton *)sender {
 }
 
 @end
