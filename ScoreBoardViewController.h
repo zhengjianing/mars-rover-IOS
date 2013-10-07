@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScoreBoardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-//@property (nonatomic) NSMutableDictionary *scores;
+@interface ScoreBoardViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic) NSArray *scores;
 
 @end

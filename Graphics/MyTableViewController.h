@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-
-
+@property (nonatomic) NSArray *scores;
 @end

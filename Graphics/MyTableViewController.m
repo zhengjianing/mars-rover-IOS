@@ -17,13 +17,40 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-    }
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.scores = [NSArray arrayWithObjects:@"jianing", @"zheng", nil];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.scores count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"ScoreboardIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    NSUInteger row = [indexPath row];
+    cell.textLabel.text = [self.scores objectAtIndex:row];
+    cell.detailTextLabel.text = @"30";
+    return cell;
+}
+
 @end
