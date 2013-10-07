@@ -37,7 +37,10 @@
 - (IBAction)inputName:(UITextField *)sender {
     self.name = sender.text;
     
-    [self.players addObject:self.name];
+    NSMutableDictionary *player=[[NSMutableDictionary alloc] init];
+    [player setObject:self.name forKey:@"name"];
+    [player setObject:[NSNumber numberWithInteger:self.score] forKey:@"score"];
+    [self.players addObject:player];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

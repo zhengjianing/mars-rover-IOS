@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxT-fb-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-22"/>
+            <point key="canvasLocation" x="189" y="630"/>
         </scene>
         <!--Score Board View Controller - scoreboard-->
         <scene sceneID="bMW-Pv-iOg">
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVu-1n-XAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="-383"/>
+            <point key="canvasLocation" x="1308" y="-455"/>
         </scene>
         <!--My Table View Controller - scoreboard-->
         <scene sceneID="G7R-8Z-nur">
@@ -358,7 +358,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tr-tK-nXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="-582"/>
+            <point key="canvasLocation" x="638" y="-32"/>
         </scene>
         <!--View Controller - scoreboard-->
         <scene sceneID="blt-bw-V9V">
@@ -373,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Al7-Uf-M4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="322"/>
+            <point key="canvasLocation" x="1288" y="208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="im0-4F-q3M">
@@ -408,9 +408,6 @@
         <class className="MarsRoverViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MarsRoverViewController.h"/>
             <relationships>
-                <relationship kind="action" name="operationButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="restartButtonClicked:"/>
-                <relationship kind="action" name="speedButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="graphicsViewControllerView" candidateClass="SkyView"/>
             </relationships>
         </class>

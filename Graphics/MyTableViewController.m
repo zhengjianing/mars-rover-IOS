@@ -46,8 +46,12 @@
     }
     
     NSUInteger row = [indexPath row];
-    cell.textLabel.text = [self.players objectAtIndex:row];
-    cell.detailTextLabel.text = @"30";
+    NSMutableArray *player = [self.players objectAtIndex:row];
+    cell.textLabel.text = [player valueForKey:@"name"];
+    
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
+    NSString *scoreString = [numberFormatter stringFromNumber:[player valueForKey:@"score"]];    
+    cell.detailTextLabel.text = scoreString;
     return cell;
 }
 
