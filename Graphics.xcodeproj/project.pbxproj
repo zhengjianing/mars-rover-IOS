@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		490D681E17E6C81A002B51A1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D681D17E6C81A002B51A1 /* MyTableViewController.m */; };
 		497DBAB81802D0C100616CD9 /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DBAB71802D0C100616CD9 /* Players.m */; };
+		49BCC8B3181CB00200F47916 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49BCC8B2181CB00200F47916 /* sky.jpg */; };
+		49BCC8B5181CB01200F47916 /* rover.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BCC8B4181CB01200F47916 /* rover.png */; };
 		49BD8CEE17E553F800C62BB9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD8CED17E553F800C62BB9 /* DetailViewController.m */; };
 		49C163CE17DB0E5B00A7FBCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C163CD17DB0E5B00A7FBCC /* UIKit.framework */; };
 		49C163D017DB0E5B00A7FBCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C163CF17DB0E5B00A7FBCC /* Foundation.framework */; };
@@ -23,8 +25,6 @@
 		49C163EA17DB0E5B00A7FBCC /* MarsRoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C163E917DB0E5B00A7FBCC /* MarsRoverViewController.m */; };
 		49C163F217DB0EB300A7FBCC /* SkyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C163F117DB0EB300A7FBCC /* SkyView.m */; };
 		49C1640917DB6F3100A7FBCC /* RoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C1640817DB6F3100A7FBCC /* RoverView.m */; };
-		49C1641117DB75DB00A7FBCC /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49C1641017DB75DB00A7FBCC /* sky.jpg */; };
-		49C1642317DB8BE400A7FBCC /* rover.png in Resources */ = {isa = PBXBuildFile; fileRef = 49C1642217DB8BE400A7FBCC /* rover.png */; };
 		49C1642617DC2AEB00A7FBCC /* Rover.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C1642517DC2AEB00A7FBCC /* Rover.m */; };
 		49C1642917DC2CD900A7FBCC /* Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C1642817DC2CD900A7FBCC /* Processor.m */; };
 		49C1646717DC7C3B00A7FBCC /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C1646517DC7C3B00A7FBCC /* OCHamcrest.framework */; };
@@ -45,6 +45,8 @@
 		4957D43D17DC8A0500A89881 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		497DBAB61802D0C100616CD9 /* Players.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Players.h; sourceTree = "<group>"; };
 		497DBAB71802D0C100616CD9 /* Players.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Players.m; sourceTree = "<group>"; };
+		49BCC8B2181CB00200F47916 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		49BCC8B4181CB01200F47916 /* rover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rover.png; sourceTree = "<group>"; };
 		49BD8CEC17E553F800C62BB9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		49BD8CED17E553F800C62BB9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		49C163CA17DB0E5B00A7FBCC /* Graphics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graphics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +69,6 @@
 		49C163F117DB0EB300A7FBCC /* SkyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyView.m; sourceTree = "<group>"; };
 		49C1640717DB6F3100A7FBCC /* RoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoverView.h; sourceTree = "<group>"; };
 		49C1640817DB6F3100A7FBCC /* RoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoverView.m; sourceTree = "<group>"; };
-		49C1641017DB75DB00A7FBCC /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sky.jpg; path = ../../sky.jpg; sourceTree = "<group>"; };
-		49C1642217DB8BE400A7FBCC /* rover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rover.png; path = ../../rover.png; sourceTree = "<group>"; };
 		49C1642417DC2AEB00A7FBCC /* Rover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rover.h; sourceTree = "<group>"; };
 		49C1642517DC2AEB00A7FBCC /* Rover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rover.m; sourceTree = "<group>"; };
 		49C1642717DC2CD900A7FBCC /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		49C163D417DB0E5B00A7FBCC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				49C1642217DB8BE400A7FBCC /* rover.png */,
-				49C1641017DB75DB00A7FBCC /* sky.jpg */,
+				49BCC8B4181CB01200F47916 /* rover.png */,
+				49BCC8B2181CB00200F47916 /* sky.jpg */,
 				49C163D517DB0E5B00A7FBCC /* Graphics-Info.plist */,
 				49C163D617DB0E5B00A7FBCC /* InfoPlist.strings */,
 				49C163D917DB0E5B00A7FBCC /* main.m */,
@@ -271,8 +271,8 @@
 				49C163E217DB0E5B00A7FBCC /* Default@2x.png in Resources */,
 				49C163E417DB0E5B00A7FBCC /* Default-568h@2x.png in Resources */,
 				49C163E717DB0E5B00A7FBCC /* MainStoryboard.storyboard in Resources */,
-				49C1641117DB75DB00A7FBCC /* sky.jpg in Resources */,
-				49C1642317DB8BE400A7FBCC /* rover.png in Resources */,
+				49BCC8B3181CB00200F47916 /* sky.jpg in Resources */,
+				49BCC8B5181CB01200F47916 /* rover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
